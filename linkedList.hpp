@@ -46,13 +46,54 @@ template <typename T> class linkedList{
                 size++;
             }
         void eliminarInicio(){
+            Node<T>* tmp = cabeza;
             cabeza = cabeza->siguiente;
-            delete cabeza->anterior;
+            cabeza->anterior = NULL;
+            delete tmp;
+            size--;
         }
 
         void eliminarFinal(){
             cola = cola->anterior;
             delete cola->siguiente;
+            size--;
+        }
+
+        void insertarPosicion(T dato, int posicion){
+            
+            if(posicion > size){
+                insertarFinal(dato);
+            }else  if(posicion == 0){
+                insertarInicio(dato);
+            }else{
+                Node<T> *nuevoNodo = new Node<T>;
+                nuevoNodo->valor = dato;
+                Node<T>* puntero = cabeza;
+                for(int i = 1; i < posicion;i++){
+                    puntero = puntero->siguiente;
+                }
+                puntero->anterior->siguiente = nuevoNodo;
+                nuevoNodo->anterior = puntero->anterior;
+                puntero->anterior = nuevoNodo;
+                nuevoNodo->siguiente = puntero;
+            }
+        }
+
+        void eliminarPosicion(int posicion){
+            if(posicion > size){
+                eliminarFinal();
+            }else  if(posicion == 0){
+                eliminarInicio();
+            }else{
+                Node<T>* puntero = cabeza;
+                for(int i = 1; i < posicion;i++){
+                    puntero = puntero->siguiente;
+                }
+                puntero->anterior->siguiente = puntero->siguiente;
+                puntero->siguiente->anterior = puntero->anterior;
+                delete(puntero);
+                size--;
+            }
         }
 
         void display() { 

@@ -5,15 +5,17 @@
 int main(){
     linkedList<int> lista;
     lista.insertarFinal(3);
-    lista.insertarInicio(3);
-    lista.insertarInicio(5);
-    lista.insertarInicio(76);
+    lista.insertarFinal(5);
+    lista.insertarFinal(76);
     lista.insertarFinal(876);
-    lista.insertarInicio(13);
+    //lista.insertarInicio(13);
     lista.insertarFinal(27);
-    lista.displayR();
-    printf("__________________");
+    //lista.insertarPosicion(555,5);
+    lista.display();
+    //lista.eliminarPosicion(2);
     lista.eliminarInicio();
+    lista.display();
+    //lista.eliminarInicio();
     lista.displayR();
     return 0;
 }

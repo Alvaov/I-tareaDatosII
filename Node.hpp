@@ -4,7 +4,7 @@ using namespace std;
 template <typename T> class Node{
     public: 
         T valor;
-        Node *anterior;
-        Node *siguiente;
+        Node *anterior = NULL;
+        Node *siguiente = NULL;
 
 };
