@@ -25,7 +25,24 @@ template <typename T> class linkedList{
                 if(cabeza != NULL){
                     cabeza->anterior = nuevoNodo;
                 }
+                else if(cabeza == NULL){
+                    cola = nuevoNodo;
+                }
                 cabeza = nuevoNodo;
+                size++;
+            }
+
+        void insertarFinal(T dato){
+                Node<T> *nuevoNodo = new Node<T>;
+                nuevoNodo->valor = dato;
+                nuevoNodo->anterior = cola;
+                nuevoNodo->siguiente =NULL;
+
+                if(cola != NULL){
+                    cola->siguiente = nuevoNodo;
+                }
+                cola = nuevoNodo;
+                size++;
             }
 
         void display() { 
