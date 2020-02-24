@@ -24,8 +24,7 @@ template <typename T> class linkedList{
 
                 if(cabeza != NULL){
                     cabeza->anterior = nuevoNodo;
-                }
-                else if(cabeza == NULL){
+                }else{
                     cola = nuevoNodo;
                 }
                 cabeza = nuevoNodo;
@@ -40,10 +39,21 @@ template <typename T> class linkedList{
 
                 if(cola != NULL){
                     cola->siguiente = nuevoNodo;
+                }else{
+                    cabeza = nuevoNodo;
                 }
                 cola = nuevoNodo;
                 size++;
             }
+        void eliminarInicio(){
+            cabeza = cabeza->siguiente;
+            delete cabeza->anterior;
+        }
+
+        void eliminarFinal(){
+            cola = cola->anterior;
+            delete cola->siguiente;
+        }
 
         void display() { 
             Node<T> *ptr;
@@ -51,6 +61,15 @@ template <typename T> class linkedList{
             while(ptr != NULL) { 
                 cout<< ptr->valor <<" "; 
                 ptr = ptr->siguiente; 
+            }
+        }
+
+        void displayR() { 
+            Node<T> *ptr;
+            ptr = cola;  
+            while(ptr != NULL) { 
+                cout<< ptr->valor <<" "; 
+                ptr = ptr->anterior; 
             }
         }
 };
