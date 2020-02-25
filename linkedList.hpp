@@ -96,6 +96,27 @@ template <typename T> class linkedList{
             }
         }
 
+        /*void intercambiar(int desde, int hasta){
+            Node<T>* desdePtr = cabeza;
+            Node<T>* hastaPtr = cabeza;
+            int i = 1;
+            for(i; i < desde;i++){
+                desdePtr = desdePtr->siguiente;
+            }
+            for(i = 1; i < hasta;i++){
+                hastaPtr = hastaPtr->siguiente;
+            }
+            Node<T>* tmp = desdePtr;
+            desdePtr->anterior->siguiente= hastaPtr;
+            hastaPtr->anterior->siguiente= desdePtr;
+            
+            //desdePtr->siguiente = hastaPtr->siguiente;
+            //desdePtr->anterior = hastaPtr->anterior;
+            hastaPtr->siguiente = desdePtr->siguiente;
+            hastaPtr->anterior = desdePtr->anterior;
+            delete tmp;
+        }*/
+
         void display() { 
             Node<T> *ptr;
             ptr = cabeza;  

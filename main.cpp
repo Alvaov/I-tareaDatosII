@@ -13,9 +13,10 @@ int main(){
     //lista.insertarPosicion(555,5);
     lista.display();
     //lista.eliminarPosicion(2);
-    lista.eliminarInicio();
+    //lista.eliminarInicio();
+    lista.intercambiar(3,5);
     lista.display();
     //lista.eliminarInicio();
-    lista.displayR();
+    //lista.displayR();
     return 0;
 }
