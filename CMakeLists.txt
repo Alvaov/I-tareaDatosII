@@ -10,4 +10,11 @@ add_executable(
   linkedList.hpp
   Node.hpp
   main.cpp
+  Cola.hpp
+  Cola.cpp
+  Edge.hpp
+  Graph.hpp
+  Graph.cpp
+  NodeGraph.hpp
+  nodoCola.hpp
 )

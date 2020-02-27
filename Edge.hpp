@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include "NodeGraph.hpp"
 
-class Edge{
+template <typename T> class Edge{
     public :
 
         int peso, id;
-        NodeGraph<T>* inicio, fin;
+        nodeGraph<T>* inicio, destino;
 
-        Edge(int peso, NodeGraph*<T> inicio, NodeGraph*<T> fin, int id){
+        Edge(int peso, int id, nodeGraph<T>* destino){
             this->peso = peso;
             this->inicio = inicio;
-            this->fin = fin;
+            this->destino = destino;
             this->id = id;
         }
 
-}
+};

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "linkedList.hpp"
+#include "Graph.hpp"
 
 
 int main(){
@@ -14,9 +15,13 @@ int main(){
     lista.display();
     //lista.eliminarPosicion(2);
     //lista.eliminarInicio();
-    lista.intercambiar(3,5);
+    //lista.intercambiar(3,5);
     lista.display();
     //lista.eliminarInicio();
     //lista.displayR();
+    Graph* grafo = new Graph();
+    grafo.anadirNodo(3,2);
+    grafo.anadirNodo(6,3);
+    grafo.anadirArista(15,1,2);
     return 0;
 }

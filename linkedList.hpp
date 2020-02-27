@@ -96,6 +96,15 @@ template <typename T> class linkedList{
             }
         }
 
+        T obtenerValor(int posicion){
+
+            Node<T> *puntero = cabeza;
+            for(int i = 1; i < posicion;i++){
+                puntero = puntero->siguiente;
+            }
+            return puntero->valor;
+        }
+
         /*void intercambiar(int desde, int hasta){
             Node<T>* desdePtr = cabeza;
             Node<T>* hastaPtr = cabeza;
