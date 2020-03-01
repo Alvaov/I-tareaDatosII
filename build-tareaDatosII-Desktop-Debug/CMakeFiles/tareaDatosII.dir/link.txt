@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/tareaDatosII.dir/tareaDatosII_autogen/mocs_compilation.cpp.o CMakeFiles/tareaDatosII.dir/main.cpp.o CMakeFiles/tareaDatosII.dir/mainwindow.cpp.o  -o tareaDatosII  /usr/lib/libQt5Widgets.so.5.14.1 /usr/lib/libQt5Gui.so.5.14.1 /usr/lib/libQt5Core.so.5.14.1 
