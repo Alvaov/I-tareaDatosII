@@ -4,7 +4,6 @@
 CMakeFiles/tareaDatosII.dir/main.cpp.o
  /home/alvaov/Desktop/I tareaDatosII/tareaDatosII/Graph.hpp
  /home/alvaov/Desktop/I tareaDatosII/tareaDatosII/main.cpp
- /home/alvaov/Desktop/I tareaDatosII/tareaDatosII/mainwindow.h
  /usr/include/qt/QtCore/qalgorithms.h
  /usr/include/qt/QtCore/qarraydata.h
  /usr/include/qt/QtCore/qatomic.h
@@ -88,7 +87,6 @@ CMakeFiles/tareaDatosII.dir/main.cpp.o
  /usr/include/qt/QtGui/qfontinfo.h
  /usr/include/qt/QtGui/qfontmetrics.h
  /usr/include/qt/QtGui/qguiapplication.h
- /usr/include/qt/QtGui/qicon.h
  /usr/include/qt/QtGui/qimage.h
  /usr/include/qt/QtGui/qinputmethod.h
  /usr/include/qt/QtGui/qkeysequence.h
@@ -110,12 +108,9 @@ CMakeFiles/tareaDatosII.dir/main.cpp.o
  /usr/include/qt/QtGui/qwindowdefs.h
  /usr/include/qt/QtGui/qwindowdefs_win.h
  /usr/include/qt/QtWidgets/QApplication
- /usr/include/qt/QtWidgets/QMainWindow
  /usr/include/qt/QtWidgets/qapplication.h
  /usr/include/qt/QtWidgets/qdesktopwidget.h
- /usr/include/qt/QtWidgets/qmainwindow.h
  /usr/include/qt/QtWidgets/qsizepolicy.h
- /usr/include/qt/QtWidgets/qtabwidget.h
  /usr/include/qt/QtWidgets/qtwidgets-config.h
  /usr/include/qt/QtWidgets/qtwidgetsglobal.h
  /usr/include/qt/QtWidgets/qwidget.h

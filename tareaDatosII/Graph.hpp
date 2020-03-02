@@ -219,11 +219,11 @@ public:
         string ruta = "";
         while(ini!=NULL){
             char paso = desencolar()->dato;
-            printf("%c ",paso);
-            ruta+" "+paso;
+            //printf("%c ",paso);
+            ruta = ruta+" "+paso;
 
         }
-            printf("\n");
+            //printf("\n");
         reiniciar();
         return ruta;
     }

@@ -14,6 +14,7 @@
 using namespace std;
 class Socket{
 public:
+    Socket();
     int sock;
     int crearSocket();
     int conectar(int sock, sockaddr_in hint);

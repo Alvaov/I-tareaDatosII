@@ -9,10 +9,12 @@
 /home/alvaov/Desktop/I tareaDatosII/tareaDatosII/Graph.hpp
 stdio.h
 -
+string
+-
+string.h
+-
 
 /home/alvaov/Desktop/I tareaDatosII/tareaDatosII/main.cpp
-mainwindow.h
-/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/mainwindow.h
 Graph.hpp
 /home/alvaov/Desktop/I tareaDatosII/tareaDatosII/Graph.hpp
 stdio.h
@@ -34,10 +36,6 @@ string.h
 string
 -
 QApplication
--
-
-/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/mainwindow.h
-QMainWindow
 -
 
 /usr/include/qt/QtCore/qalgorithms.h
@@ -896,16 +894,6 @@ QtCore/qpoint.h
 QtCore/qsize.h
 -
 
-/usr/include/qt/QtGui/qicon.h
-QtGui/qtguiglobal.h
--
-QtCore/qsize.h
--
-QtCore/qlist.h
--
-QtGui/qpixmap.h
--
-
 /usr/include/qt/QtGui/qimage.h
 QtGui/qtguiglobal.h
 -
@@ -1108,10 +1096,6 @@ QtGui/qtguiglobal.h
 qapplication.h
 /usr/include/qt/QtWidgets/qapplication.h
 
-/usr/include/qt/QtWidgets/QMainWindow
-qmainwindow.h
-/usr/include/qt/QtWidgets/qmainwindow.h
-
 /usr/include/qt/QtWidgets/qapplication.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1136,28 +1120,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 
-/usr/include/qt/QtWidgets/qmainwindow.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-QtWidgets/qtabwidget.h
--
-
 /usr/include/qt/QtWidgets/qsizepolicy.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtCore/qobject.h
 -
 QtCore/qalgorithms.h
--
-
-/usr/include/qt/QtWidgets/qtabwidget.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-QtGui/qicon.h
 -
 
 /usr/include/qt/QtWidgets/qtwidgets-config.h

@@ -17,13 +17,14 @@ class MainWindow : public QMainWindow{
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    Socket* socket = new Socket();
+
 
 private slots:
     void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
-    Socket socket;
 
 };
 #endif // MAINWINDOW_H

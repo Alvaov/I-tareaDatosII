@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-    socket.closeSocket(socket.sock);
+    socket->closeSocket(socket->sock);
     delete ui;
 }
 
@@ -21,10 +21,10 @@ void MainWindow::on_pushButton_clicked()
 {
     QString desde = ui->textEdit->toPlainText();
     QString hasta = ui->textEdit_2->toPlainText();
-
+    ui->label_2->setText("");
     qDebug()<<"Read Data"<< desde << hasta;
-    std::string resultado = "1"+desde.toStdString()+hasta.toStdString();
-    socket.crearSocket();
-    socket.comunicar(resultado);
-    ui->label_2->setText(socket.comunicar(resultado).c_str());
+    std::string result = "1"+desde.toStdString()+hasta.toStdString();
+
+    std::string resultado = "La ruta desde "+ desde.toStdString() + " hasta " + hasta.toStdString() + " es " + socket->comunicar(result);
+    ui->label_2->setText(resultado.c_str());
 }

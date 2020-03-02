@@ -39,7 +39,6 @@ int main() {
     grafo->insertarArista(2,'H','I');
     grafo->insertarArista(1,'H','D');
     grafo->insertarArista(2,'D','I');
-
     int listening = socket(AF_INET,SOCK_STREAM,0);
 
     sockaddr_in hint;
@@ -92,21 +91,23 @@ int main() {
         int bytesRecv = recv(clientSocket,buf,4096,0);
 
         if(bytesRecv== -1){
-            printf("Hubo un error de conección");
+            printf("Hubo un error de conexión");
             break;
         }
         if(bytesRecv == 0){
             printf("Cliente desconectado");
             break;
         }
-        string ruta = "";
+        //string ruta = "";
         if(buf[0] == '1'){
-            ruta = grafo->dijkstra(buf[1], buf[2]);
-
+            string ruta = grafo->dijkstra(buf[1], buf[2]);
+            cout << "Ruta" << ruta << endl;
+            send(clientSocket,ruta.c_str(),ruta.size()+1,0);
+            //send(clientSocket,buf,bytesRecv+1,0);
         }
         printf("Received");
 
-        send(clientSocket,buf,bytesRecv+1,0);
+        //send(clientSocket,buf,bytesRecv+1,0);
 
 
     }

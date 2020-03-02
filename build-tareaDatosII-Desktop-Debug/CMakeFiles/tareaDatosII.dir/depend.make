@@ -3,7 +3,6 @@
 
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /home/alvaov/Desktop/I\ tareaDatosII/tareaDatosII/Graph.hpp
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /home/alvaov/Desktop/I\ tareaDatosII/tareaDatosII/main.cpp
-CMakeFiles/tareaDatosII.dir/main.cpp.o: /home/alvaov/Desktop/I\ tareaDatosII/tareaDatosII/mainwindow.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtCore/qalgorithms.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtCore/qarraydata.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtCore/qatomic.h
@@ -87,7 +86,6 @@ CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qfont.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qfontinfo.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qfontmetrics.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qguiapplication.h
-CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qicon.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qimage.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qinputmethod.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qkeysequence.h
@@ -109,12 +107,9 @@ CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qvector2d.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qwindowdefs.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtGui/qwindowdefs_win.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/QApplication
-CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/QMainWindow
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/qapplication.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/qdesktopwidget.h
-CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/qmainwindow.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/qsizepolicy.h
-CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/qtabwidget.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/qtwidgets-config.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/qtwidgetsglobal.h
 CMakeFiles/tareaDatosII.dir/main.cpp.o: /usr/include/qt/QtWidgets/qwidget.h

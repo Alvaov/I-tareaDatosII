@@ -1,0 +1,4 @@
+/home/alvaov/Desktop/I tareaDatosII/build-cliente-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/alvaov/Desktop/I tareaDatosII/build-cliente-Desktop-Debug/CMakeFiles/cliente.dir
+/home/alvaov/Desktop/I tareaDatosII/build-cliente-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/alvaov/Desktop/I tareaDatosII/build-cliente-Desktop-Debug/CMakeFiles/cliente_autogen.dir

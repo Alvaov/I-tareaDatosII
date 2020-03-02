@@ -1,5 +1,23 @@
 #include "socket.hpp"
 
+Socket::Socket(){
+    sock = socket(AF_INET,SOCK_STREAM,0);
+    if(sock == -1){
+      //  return -1;
+    }
+    int port = 54000;
+    string ipAdress = "127.0.0.1";
+
+    sockaddr_in hint;
+    hint.sin_family = AF_INET;
+    hint.sin_port = htons(port);
+    inet_pton(AF_INET,ipAdress.c_str(), &hint.sin_addr);
+
+    conectar(sock,hint);
+   // return sock;
+
+}
+
 int Socket::crearSocket(){
 
     sock = socket(AF_INET,SOCK_STREAM,0);
@@ -37,9 +55,12 @@ string Socket::comunicar(string userInput){
 
     memset(buf, 0, 4096);
     int bytesReceived = recv(sock, buf, 4096,0);
+    if(bytesReceived == 0){
+        cerr << "Conexión perdida" << endl;
+    }
 
 
-    return string(buf,bytesReceived);
+    return string(buf);
 }
 
 
