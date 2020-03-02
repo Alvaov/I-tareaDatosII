@@ -15,6 +15,7 @@ using namespace std;
 /**
  * @brief The Socket class
  * Clase que controla la creación de sockets, así como su comunicación con el servidor
+ * Código basado en https://gist.github.com/codehoose/d7dea7010d041d52fb0f59cbe3826036
  */
 class Socket{
 public:
