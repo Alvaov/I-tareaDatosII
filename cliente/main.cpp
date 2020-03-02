@@ -14,7 +14,14 @@ using namespace std;
 
 
 
-
+/**
+ * @brief main
+ * @param argc
+ * @param argv
+ * @return
+ *
+ * Método principal que crea la ventana de la GUI
+ */
 int main(int argc, char *argv[]){
 
     QApplication a(argc, argv);

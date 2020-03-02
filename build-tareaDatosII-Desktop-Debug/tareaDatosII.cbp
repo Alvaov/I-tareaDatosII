@@ -5,7 +5,7 @@
 		<Option title="tareaDatosII"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Core\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Core\;CMake Files\..\build-tareaDatosII-Desktop-Debug\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug"/>
@@ -22,6 +22,16 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -93,11 +103,11 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="docs">
 				<Option working_dir="/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 docs"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-tareaDatosII-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -121,15 +131,6 @@
 			<Option target="tareaDatosII"/>
 		</Unit>
 		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/main.cpp">
-			<Option target="tareaDatosII"/>
-		</Unit>
-		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/mainwindow.cpp">
-			<Option target="tareaDatosII"/>
-		</Unit>
-		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/mainwindow.h">
-			<Option target="tareaDatosII"/>
-		</Unit>
-		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/mainwindow.ui">
 			<Option target="tareaDatosII"/>
 		</Unit>
 		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/CMakeLists.txt">
@@ -278,6 +279,12 @@
 		</Unit>
 		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/../../../../../usr/lib64/cmake/Qt5Core/Qt5CoreMacros.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/../build-tareaDatosII-Desktop-Debug/CMakeDoxyfile.in">
+			<Option virtualFolder="CMake Files\..\build-tareaDatosII-Desktop-Debug\"/>
+		</Unit>
+		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/../build-tareaDatosII-Desktop-Debug/CMakeDoxygenDefaults.cmake">
+			<Option virtualFolder="CMake Files\..\build-tareaDatosII-Desktop-Debug\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -124,6 +124,19 @@ tareaDatosII/fast:
 .PHONY : tareaDatosII/fast
 
 #=============================================================================
+# Target rules for targets named docs
+
+# Build rule for target.
+docs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 docs
+.PHONY : docs
+
+# fast build rule for target.
+docs/fast:
+	$(MAKE) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/build
+.PHONY : docs/fast
+
+#=============================================================================
 # Target rules for targets named tareaDatosII_autogen
 
 # Build rule for target.
@@ -163,33 +176,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/tareaDatosII.dir/build.make CMakeFiles/tareaDatosII.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-mainwindow.o: mainwindow.cpp.o
-
-.PHONY : mainwindow.o
-
-# target to build an object file
-mainwindow.cpp.o:
-	$(MAKE) -f CMakeFiles/tareaDatosII.dir/build.make CMakeFiles/tareaDatosII.dir/mainwindow.cpp.o
-.PHONY : mainwindow.cpp.o
-
-mainwindow.i: mainwindow.cpp.i
-
-.PHONY : mainwindow.i
-
-# target to preprocess a source file
-mainwindow.cpp.i:
-	$(MAKE) -f CMakeFiles/tareaDatosII.dir/build.make CMakeFiles/tareaDatosII.dir/mainwindow.cpp.i
-.PHONY : mainwindow.cpp.i
-
-mainwindow.s: mainwindow.cpp.s
-
-.PHONY : mainwindow.s
-
-# target to generate assembly for a file
-mainwindow.cpp.s:
-	$(MAKE) -f CMakeFiles/tareaDatosII.dir/build.make CMakeFiles/tareaDatosII.dir/mainwindow.cpp.s
-.PHONY : mainwindow.cpp.s
-
 tareaDatosII_autogen/mocs_compilation.o: tareaDatosII_autogen/mocs_compilation.cpp.o
 
 .PHONY : tareaDatosII_autogen/mocs_compilation.o
@@ -224,15 +210,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... tareaDatosII"
 	@echo "... edit_cache"
+	@echo "... tareaDatosII"
+	@echo "... docs"
 	@echo "... tareaDatosII_autogen"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mainwindow.o"
-	@echo "... mainwindow.i"
-	@echo "... mainwindow.s"
 	@echo "... tareaDatosII_autogen/mocs_compilation.o"
 	@echo "... tareaDatosII_autogen/mocs_compilation.i"
 	@echo "... tareaDatosII_autogen/mocs_compilation.s"

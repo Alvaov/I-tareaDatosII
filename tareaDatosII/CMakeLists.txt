@@ -29,19 +29,16 @@ find_package(Qt5 COMPONENTS Widgets REQUIRED)
 if(ANDROID)
   add_library(tareaDatosII SHARED
     main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
     Graph.hpp
   )
 else()
   add_executable(tareaDatosII
     main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
     Graph.hpp
   )
 endif()
+
+find_package(Doxygen REQUIRED)
+doxygen_add_docs(docs . ALL)
 
 target_link_libraries(tareaDatosII PRIVATE Qt5::Widgets)

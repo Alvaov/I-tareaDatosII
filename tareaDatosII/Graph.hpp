@@ -1,8 +1,10 @@
 #ifndef GRAPH_HPP
 #define GRAPH_HPP
-/*
+/**
  *Codigo basado en https://github.com/GGLSoftware/Grafos/blob/master/Grafo.c#L254
+ * Modificado por Alejandro Vásquez Oviedo
 */
+
 #include <stdio.h>
 #include <string>
 #include <string.h>
@@ -13,6 +15,10 @@ using namespace std;
 #define Arista struct arista
 #define Lista struct pila
 
+/**
+ * Estructura que almacena los nodos utilizados para representar los vertices
+ * del grafo y a su vez funciona como lista de nodos
+ */
 Nodo{
     char dato;
     Nodo* siguiente;
@@ -22,25 +28,51 @@ Nodo{
     char anterior;
 };
 
+/**
+ * Estructura que almacena las aristas utilizados para representar los vertices
+ * del grafo y a su vez funciona como lista de nodos
+ */
 Arista{
     Nodo*vrt;
     Arista*siguiente;
     int peso;
 };
 
+/**
+ * Estructura que almacena un puntero a un nodo y una referencia de tipo lista al
+ * siguiente, con el objetivo de utilizarlo como los nodos de la cola para
+ * Dijkstra
+*/
 Lista{
     Nodo* dato;
     Lista*siguiente;
     int size;
 };
-
+/**
+ * Clase grafo que permite la creación del grafo, sus nodos y aristas. Así como
+ * la implementación de Dijkstra con
+*/
 class Graph{
 public:
-
+    /**
+     * @brief inicio
+     * Primer nodo del grafo
+     */
     Nodo*inicio=NULL;
+    /**
+     * @brief ini
+     * Lista donde se almacenará la cola requerida para Dijkstra
+     */
     Lista*ini=NULL;
+    /**
+     * @brief final
+     * Referencia utilizada en la cola como el final de esta
+     */
     Lista*final=NULL;
-
+    /**
+     * Función que permite crear un nuevo nodo sin conexiones al grafo.
+     * Obtiene un char como el valor que contendrá el nodo
+    */
     void insertarNodo(char dato){
         Nodo* aux;
         Nodo* nuevo= new Nodo;
@@ -61,7 +93,11 @@ public:
           }
 
      }
-
+    /**
+     * Método que toma el peso, origen y destino como parámetros para formar una arista
+     * Se apoya en agregarArista() para completar la conexión entre dos nodos de un
+     * grafo dirigido
+    */
     void insertarArista(int peso, char ini, char fin){
         Arista* nuevo=new Arista;
         nuevo->siguiente=NULL;
@@ -94,7 +130,11 @@ public:
         if(aux==NULL)
             printf("Error:Vertice no encontrado\n");
     }
-
+    /**
+     * Método auxiliar en la creación de aristas encargado de asignar la arista a la
+     * adyacencia del nodo origen e indicar el nodo destino en el atributo respectivo
+     * de la arista
+    */
     void agregarArista(Nodo* aux,Nodo* aux2,Arista* nuevo){
         Arista* a;
         if(aux->adyacencia==NULL){
@@ -108,26 +148,9 @@ public:
             a->siguiente=nuevo;
         }
     }
-
-    void visualizarGrafo(){
-        Nodo*aux=inicio;
-        Arista* ar;
-        printf("Nodos\n");
-        while(aux!=NULL){
-            printf("%c:    ",aux->dato);
-            if(aux->adyacencia!=NULL){
-                ar=aux->adyacencia;
-                while(ar!=NULL){
-                    printf(" %c",ar->vrt->dato);
-                    ar=ar->siguiente;
-                }
-            }
-            printf("\n");
-            aux=aux->siguiente;
-        }
-        printf("\n");
-    }
-
+    /**
+     * Método que permite insertar nuevos elementos en una pila
+    */
     void insertarPila(Nodo* aux){
         Lista*nuevo= new Lista;
         nuevo->dato=aux;
@@ -143,6 +166,9 @@ public:
         }
     }
 
+    /**
+     * Método que permite sacar los elmentos de la pila
+    */
     Nodo*desencolar(){
         Lista*aux;
         if(ini==NULL){
@@ -158,7 +184,9 @@ public:
         delete aux;
         return resultado;
     }
-
+    /**
+     * Reinicia los valores se los nodos dejando el grafo listo para la siguiente evaluación
+    */
     void reiniciar(){
         if(inicio!=NULL){
             Nodo*aux=inicio;
@@ -168,7 +196,10 @@ public:
             }
         }
     }
-
+    /**
+     * Método cuya función consiste en ejecutar Dijkstra desde un nodo a hasta un nodo
+     * b
+    */
     string dijkstra(char a, char b){
         Nodo*aux=inicio;
         fflush(stdin);

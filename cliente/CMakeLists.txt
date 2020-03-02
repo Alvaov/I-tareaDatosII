@@ -46,4 +46,7 @@ else()
   )
 endif()
 
+find_package(Doxygen REQUIRED)
+doxygen_add_docs(docs . ALL)
+
 target_link_libraries(cliente PRIVATE Qt5::Widgets)

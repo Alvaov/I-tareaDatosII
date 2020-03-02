@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/main.cpp" "/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/tareaDatosII.dir/main.cpp.o"
-  "/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/mainwindow.cpp" "/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/tareaDatosII.dir/mainwindow.cpp.o"
   "/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/tareaDatosII_autogen/mocs_compilation.cpp" "/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/tareaDatosII.dir/tareaDatosII_autogen/mocs_compilation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

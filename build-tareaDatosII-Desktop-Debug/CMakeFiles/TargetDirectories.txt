@@ -1,4 +1,5 @@
 /home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/tareaDatosII.dir
 /home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/tareaDatosII.dir
+/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/docs.dir
 /home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/tareaDatosII_autogen.dir

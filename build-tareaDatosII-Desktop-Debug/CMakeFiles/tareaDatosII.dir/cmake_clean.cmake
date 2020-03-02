@@ -3,7 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/tareaDatosII_autogen.dir/ParseCache.txt"
   "tareaDatosII_autogen"
   "CMakeFiles/tareaDatosII.dir/main.cpp.o"
-  "CMakeFiles/tareaDatosII.dir/mainwindow.cpp.o"
   "CMakeFiles/tareaDatosII.dir/tareaDatosII_autogen/mocs_compilation.cpp.o"
   "tareaDatosII"
   "tareaDatosII.pdb"

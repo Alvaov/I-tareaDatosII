@@ -18,24 +18,6 @@ Socket::Socket(){
 
 }
 
-int Socket::crearSocket(){
-
-    sock = socket(AF_INET,SOCK_STREAM,0);
-    if(sock == -1){
-        return -1;
-    }
-    int port = 54000;
-    string ipAdress = "127.0.0.1";
-
-    sockaddr_in hint;
-    hint.sin_family = AF_INET;
-    hint.sin_port = htons(port);
-    inet_pton(AF_INET,ipAdress.c_str(), &hint.sin_addr);
-
-    conectar(sock,hint);
-    return sock;
-
-}
 
 int Socket::conectar(int sock, sockaddr_in hint){
     int connectResult = connect(sock, (sockaddr*)&hint, sizeof(sockaddr_in));

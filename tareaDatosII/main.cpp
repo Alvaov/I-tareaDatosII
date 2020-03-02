@@ -11,8 +11,10 @@
 #include <QApplication>
 
 using namespace std;
-/*
+/**
  * Tomado basado en https://gist.github.com/codehoose/020c6213f481aee76ea9b096acaddfaf
+ * Método encargado de iniciar el servidor y crear el socket, así como revibir e
+ * interpretar los mensajes enviados por el cliente
 */
 int main() {
 

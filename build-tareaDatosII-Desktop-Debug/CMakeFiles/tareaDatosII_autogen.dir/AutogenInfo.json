@@ -11,11 +11,6 @@
 			"/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/Graph.hpp",
 			"MU",
 			"EWIEGA46WW/moc_Graph.cpp"
-		],
-		[
-			"/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/mainwindow.h",
-			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -69,11 +64,7 @@
 	"SETTINGS_FILE" : "/home/alvaov/Desktop/I tareaDatosII/build-tareaDatosII-Desktop-Debug/CMakeFiles/tareaDatosII_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/main.cpp", "MU" ],
-		[
-			"/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/mainwindow.cpp",
-			"MU"
-		]
+		[ "/home/alvaov/Desktop/I tareaDatosII/tareaDatosII/main.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

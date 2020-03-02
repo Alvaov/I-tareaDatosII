@@ -124,6 +124,19 @@ cliente/fast:
 .PHONY : cliente/fast
 
 #=============================================================================
+# Target rules for targets named docs
+
+# Build rule for target.
+docs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 docs
+.PHONY : docs
+
+# fast build rule for target.
+docs/fast:
+	$(MAKE) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/build
+.PHONY : docs/fast
+
+#=============================================================================
 # Target rules for targets named cliente_autogen
 
 # Build rule for target.
@@ -251,8 +264,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... cliente"
 	@echo "... edit_cache"
+	@echo "... cliente"
+	@echo "... docs"
 	@echo "... cliente_autogen"
 	@echo "... cliente_autogen/mocs_compilation.o"
 	@echo "... cliente_autogen/mocs_compilation.i"

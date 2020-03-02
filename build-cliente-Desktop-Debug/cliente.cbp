@@ -5,7 +5,7 @@
 		<Option title="cliente"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Core\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Core\;CMake Files\..\build-cliente-Desktop-Debug\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/alvaov/Desktop/I tareaDatosII/build-cliente-Desktop-Debug"/>
@@ -22,6 +22,16 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/alvaov/Desktop/I tareaDatosII/build-cliente-Desktop-Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -93,11 +103,11 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="docs">
 				<Option working_dir="/home/alvaov/Desktop/I tareaDatosII/build-cliente-Desktop-Debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 docs"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alvaov/Desktop/I\ tareaDatosII/build-cliente-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -281,6 +291,12 @@
 		</Unit>
 		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/cliente/../../../../../usr/lib64/cmake/Qt5Core/Qt5CoreMacros.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/cliente/../build-cliente-Desktop-Debug/CMakeDoxyfile.in">
+			<Option virtualFolder="CMake Files\..\build-cliente-Desktop-Debug\"/>
+		</Unit>
+		<Unit filename="/home/alvaov/Desktop/I tareaDatosII/cliente/../build-cliente-Desktop-Debug/CMakeDoxygenDefaults.cmake">
+			<Option virtualFolder="CMake Files\..\build-cliente-Desktop-Debug\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
