@@ -4,6 +4,10 @@
  *Codigo basado en https://github.com/GGLSoftware/Grafos/blob/master/Grafo.c#L254
 */
 #include <stdio.h>
+#include <string>
+#include <string.h>
+
+using namespace std;
 
 #define Nodo struct nodo
 #define Arista struct arista
@@ -27,6 +31,7 @@ Arista{
 Lista{
     Nodo* dato;
     Lista*siguiente;
+    int size;
 };
 
 class Graph{
@@ -123,100 +128,18 @@ public:
         printf("\n");
     }
 
-    void recorridos(){
-        char vertice;
-        Nodo*aux=inicio,*aux2=inicio;
-      if(inicio!=NULL){
-         fflush(stdin);
-         printf("Escoger vertice inicial:");
-         scanf("%c",&vertice);
-         while(aux!=NULL){
-            if(aux->dato==vertice)
-            break;
-            aux=aux->siguiente;
-         }
-         if(aux==NULL){
-            printf("Error: Vertice no encontrado\n");
-         }else{
-            printf("Recorrido por anchura: ");
-            aux->visitado=1;
-            insertarCola(aux);
-            recorridoAnchura();
-            reiniciar();
-            printf("\nRecorrido por profundidad: ");
-            recorridoProfundidad(aux);
-            while(aux2!=NULL){
-                if(aux2->terminado==0)
-                recorridoProfundidad(aux2);
-                aux2=aux2->siguiente;
-            }
-            while(ini!=NULL)
-                printf("%c ",desencolar()->dato);
-            reiniciar();
-            printf("\n");
-         }
-       }
-    }
-    // 0407 Contraseña de MemoLey
-    // 1-0 Contraseña de internet
-    void recorridoAnchura(){
-        Nodo*aux=desencolar();
-        if(aux==NULL)
-        return;
-        printf("%c ",aux->dato);
-        if(aux->adyacencia!=NULL){
-            Arista*a=aux->adyacencia;
-            while(a!=NULL){
-                if(a->vrt->visitado==0){
-                    insertarCola(a->vrt);
-                    a->vrt->visitado=1;
-                }
-                a=a->siguiente;
-            }
-        }
-        recorridoAnchura();
-
-    }
-
-    void recorridoProfundidad(Nodo* aux){
-        Arista*a;
-        aux->visitado=1;
-        if(aux->adyacencia!=NULL){
-            a=aux->adyacencia;
-            while(a!=NULL){
-                if(a->vrt->visitado==0){
-                    recorridoProfundidad(a->vrt);
-                }
-                a=a->siguiente;
-            }
-        }
-        aux->terminado=1;
-        insertarPila(aux);
-    }
-
     void insertarPila(Nodo* aux){
-        Lista*nuevo=(Lista*)malloc(sizeof(Lista));
+        Lista*nuevo= new Lista;
         nuevo->dato=aux;
         nuevo->siguiente=NULL;
         if(ini==NULL){
             ini=nuevo;
             final=nuevo;
+            ini->size++;
         }else{
            nuevo->siguiente=ini;
            ini=nuevo;
-        }
-    }
-
-    void insertarCola(Nodo*aux){
-        Lista*nuevo=(Lista*)malloc(sizeof(Lista));
-        nuevo->dato=aux;
-        nuevo->siguiente=NULL;
-        if(ini==NULL){
-            ini=nuevo;
-            final=nuevo;
-        }else{
-            final->siguiente=nuevo;
-            final=nuevo;
+           ini->size;
         }
     }
 
@@ -232,7 +155,7 @@ public:
             final=NULL;
         }
         Nodo*resultado=aux->dato;
-        free(aux);
+        delete aux;
         return resultado;
     }
 
@@ -245,8 +168,8 @@ public:
             }
         }
     }
-    //Lorem Ipsum
-    void dijkstra(char a, char b){
+
+    string dijkstra(char a, char b){
         Nodo*aux=inicio;
         fflush(stdin);
         while(aux!=NULL){
@@ -259,7 +182,7 @@ public:
         }
         if(aux==NULL){
             printf("Vertice no encontrado\n");
-            return;
+            return "";
         }
         while(aux!=NULL){
             Arista*a=aux->adyacencia;
@@ -293,186 +216,16 @@ public:
             }
         }
         insertarPila(aux);
+        string ruta = "";
         while(ini!=NULL){
-            printf("%c ",desencolar()->dato);
+            char paso = desencolar()->dato;
+            printf("%c ",paso);
+            ruta+" "+paso;
+
         }
             printf("\n");
         reiniciar();
+        return ruta;
     }
 };
 #endif
- /*
-class Graph{
-
-    public :
-        int numeroNodos;
-        linkedList<nodeGraph<int>*>* nodos;
-        linkedList<Edge<int,nodeGraph>*>* edges;
-        linkedList<nodeGraph<int>*>* ini = new linkedList<nodeGraph<int>*>;
-
-        Graph();
-        nodeGraph<int>* insertarNodo(int valor,char dato);
-        int insertarArista(int peso, char inicio, char destino);
-        void dijkstra(char inicio, char b);
-        void insertarPila(nodeGraph<int>* fuente);
-        nodeGraph<int>* desencolar();
-        void reiniciar();
-
-};
-
-
-    Graph::Graph(){
-        nodos = new linkedList<nodeGraph<int>*>;
-        edges = new linkedList<Edge<int,nodeGraph>*>;
-        numeroNodos = 0;
-
-        }
-
-    nodeGraph<int>* Graph::insertarNodo(int valor, char dato){
-            nodeGraph<int>* nuevoNodo = new nodeGraph<int>;
-            nuevoNodo->valor = valor;
-            nuevoNodo->dato = dato;
-            nuevoNodo->adyacencia = new linkedList<Edge<int,nodeGraph>*>;
-            nuevoNodo->visitado = 0;
-            nuevoNodo->terminado = 0;
-            nuevoNodo->monto = 0;
-            nuevoNodo->anterior = 0;
-            nodos->insertarFinal(nuevoNodo);
-            numeroNodos++;
-            return nuevoNodo;
-        }
-
-    int Graph::insertarArista(int peso,char inicio, char destino){
-
-        Node<nodeGraph<int>*>* nodoInicio = nodos->obtenerValor(0);
-        Node<nodeGraph<int>*>* nodoFinal = nodos->obtenerValor(0);
-        Edge<int,nodeGraph>*edge = new Edge<int,nodeGraph>;
-        edge->peso = peso;
-
-        for(int i = 0; i < nodos->size; i++){
-            if(nodoInicio->valor->dato == inicio){
-                nodoInicio->valor->adyacencia->insertarFinal(edge);
-                break;
-            }
-            nodoInicio = nodoInicio->siguiente;
-        }
-
-        for(int i = 0; i < nodos->size; i++){
-            if(nodoFinal->valor->dato == destino){
-                edge->destino = nodoFinal->valor;
-                break;
-            }
-            nodoFinal = nodoFinal->siguiente;
-        }
-
-        return 0;
-    }
-
-    nodeGraph<int >* Graph::desencolar(){
-            Node<nodeGraph<int>*>* aux;
-            if(ini->size == 0){
-                    return NULL;
-            }else{
-                    aux=ini->obtenerValor(0);
-                    Node<nodeGraph<int>*>* iniNode = ini->obtenerValor(0);
-                    iniNode = iniNode->siguiente;
-                    aux->siguiente=NULL;
-                    if(ini==NULL){
-                        ini->cola=NULL;
-                    }
-                    ini->cabeza = iniNode;
-            }
-            nodeGraph<int>* resultado = aux->valor;
-            //free(aux);
-            ini->eliminarInicio();
-            return resultado;
-    }
-
-    void Graph::insertarPila(nodeGraph<int>* aux){
-        ini->insertarInicio(aux);
-    }
-
-
-    void Graph::reiniciar(){
-        Node<nodeGraph<int>*>* inicioNode = nodos->obtenerValor(0);
-        nodeGraph<int>* inicio = inicioNode->valor;
-            if(inicio!=NULL){
-                    nodeGraph<int>* auxiliar =inicio;
-                    while(auxiliar!=NULL){
-                            auxiliar->visitado = auxiliar->terminado = 0;
-                        inicioNode = inicioNode->siguiente;
-                        if(inicioNode != NULL){
-                            auxiliar = inicioNode->valor;
-                        }else{
-                            auxiliar = NULL;
-                        }
-                    }
-            }
-    }
-
-    void Graph::dijkstra(char inicio, char b){
-        Node<nodeGraph<int>*>* fuenteNode = nodos->obtenerValor(0);
-        nodeGraph<int>* fuente = fuenteNode->valor;
-        for(int i = 0; i < nodos->size; i++){
-            fuenteNode = nodos->obtenerValor(i);
-            if(fuenteNode->valor->dato == inicio){
-                fuente = fuenteNode->valor;
-                break;
-            }
-        }
-        fuente->monto = 0;
-        fuente->terminado = 1;
-
-        while(fuenteNode != NULL){
-            Node<Edge<int,nodeGraph>*>* edgeNodo = fuente->adyacencia->obtenerValor(0);
-            Edge<int,nodeGraph>* edge = edgeNodo->valor;
-
-            while(edgeNodo != NULL){
-                if((edge->destino->monto = -1) || (fuente->monto + edge->peso)< edge->destino->monto){
-                    edge->destino->monto = fuente->monto + edge->peso;
-                    edge->destino->anterior = fuente->dato;
-                }
-                edgeNodo = edgeNodo->siguiente;
-                if(edgeNodo != NULL){
-                    edge = edgeNodo->valor;
-                }
-            }
-            Node<nodeGraph<int>*>* minimoNode = fuenteNode;
-            nodeGraph<int>* minimo = minimoNode->valor;
-            while(minimo->anterior==0 || minimo->terminado == 1){
-                minimoNode = minimoNode->siguiente;
-                minimo = minimoNode->valor;
-            }while(fuenteNode != NULL){
-                if(fuente->monto < minimo->monto && fuente->terminado == 0 && fuente->dato != 0){
-                    minimo = fuente;
-                }
-                fuenteNode = fuenteNode->siguiente;
-                if(fuenteNode != NULL){
-                    fuente = fuenteNode->valor;
-                }
-            }
-            fuente = minimo;
-            fuente->terminado = 1;
-
-            if(fuente->dato = b){
-                break;
-            }
-
-        }
-        while(fuente->anterior!=0){
-            insertarPila(fuente);
-            char temp=fuente->anterior;
-            fuente= (nodos->obtenerValor(0))->valor;
-            while(fuente->dato!=temp){
-                fuenteNode = fuenteNode->siguiente;
-                fuente = fuenteNode->valor;
-            }
-        }
-
-        insertarPila(fuente);
-        while(ini->size != 0){
-            printf("%c ",desencolar()->dato);
-        }
-        printf("\n");
-        reiniciar();
-    }*/

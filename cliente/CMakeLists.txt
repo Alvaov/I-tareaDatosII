@@ -32,6 +32,8 @@ if(ANDROID)
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    socket.cpp
+    socket.hpp
   )
 else()
   add_executable(cliente
@@ -39,6 +41,8 @@ else()
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    socket.cpp
+    socket.hpp
   )
 endif()
 
