@@ -12,6 +12,7 @@ QT_END_NAMESPACE
 /**
  * @brief The MainWindow class
  * Clase que controla el lado del cliente brindando una interfaz y creando el socket para la conexión
+ * Contiene los métodos de agregar nodo, agregar aristas y calcular Dijkstra respectivamente para interactuar con el servidor y el grafo.
  */
 class MainWindow : public QMainWindow{
     Q_OBJECT
@@ -35,6 +36,10 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::MainWindow *ui;

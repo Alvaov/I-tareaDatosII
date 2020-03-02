@@ -73,7 +73,7 @@ public:
      * Función que permite crear un nuevo nodo sin conexiones al grafo.
      * Obtiene un char como el valor que contendrá el nodo
     */
-    void insertarNodo(char dato){
+    char insertarNodo(char dato){
         Nodo* aux;
         Nodo* nuevo= new Nodo;
         nuevo->dato = dato;
@@ -91,6 +91,7 @@ public:
             }
             aux->siguiente=nuevo;
           }
+        return nuevo->dato;
 
      }
     /**

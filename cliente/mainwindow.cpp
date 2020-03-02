@@ -28,3 +28,26 @@ void MainWindow::on_pushButton_clicked()
     std::string resultado = "La ruta desde "+ desde.toStdString() + " hasta " + hasta.toStdString() + " es " + socket->comunicar(result);
     ui->label_2->setText(resultado.c_str());
 }
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QString nuevoNodo = ui->textEdit_3->toPlainText();
+    std::string result = "2"+nuevoNodo.toStdString();
+    ui->label_2->setText("");
+    std::string resultado = "Se ha creado el nodo "+ socket->comunicar(result);
+    ui->label_2->setText(resultado.c_str());
+
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QString desde = ui->textEdit_4->toPlainText();
+    QString hasta = ui->textEdit_5->toPlainText();
+    QString peso = ui->textEdit_6->toPlainText();
+
+    std::string result = "3"+desde.toStdString()+hasta.toStdString()+peso.toStdString();
+
+    socket->comunicar(result);
+
+    ui->label_2->setText("Se han conectado los nodos " + desde + "y " + hasta);
+}

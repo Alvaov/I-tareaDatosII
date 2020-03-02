@@ -107,6 +107,17 @@ int main() {
             send(clientSocket,ruta.c_str(),ruta.size()+1,0);
             //send(clientSocket,buf,bytesRecv+1,0);
         }
+        if(buf[0] == '2'){
+            char result[1];
+            result[0] = grafo->insertarNodo(buf[1]);
+            send(clientSocket,result,1,0);
+
+        }
+        if(buf[0] == '3'){
+            int peso = buf[3];
+            grafo->insertarArista(peso,buf[1],buf[2]);
+            send(clientSocket,buf,bytesRecv+1,0);
+        }
         printf("Received");
 
         //send(clientSocket,buf,bytesRecv+1,0);
